@@ -1,163 +1,257 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="vegStore">
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
+    <title>Homefield Organics</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/screen.css" />
+    <link href='http://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,800,700,300,400' rel='stylesheet' type='text/css'>
     <script src="bower_components/modernizr/modernizr.js"></script>
-  </head>
-  <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
     
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-        </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
+</head>
+    <body>
+        
+        <headline></headline>
+        
+        <!-- Top Bar -->
+        <div class="contain-to-grid sticky ">
+            <nav class="top-bar" data-topbar>
+                <section class="top-bar-section">
+                    <ul class="left">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">The Food</a></li>
+                    </ul>
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+                    <ul class="logo-spot">
+                        <li class="name">
+                            <a href="#"><object id="bar-logo" data="images/Homefield%20Organics%20Logo.svg" type="image/svg+xml"></object></a> 
+                        </li>
+                    </ul>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
+                    <ul class="right">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#" class="button radius">Sign Up</a></li>
+                    </ul>
+                </section>
+            </nav>
         </div>
         
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
+        <login-and-signup></login-and-signup>
+        
+        <!-- Buzzwords -->
+        <div class="buzzwords-background">
+            <div class="row buzzwords area">
+                <div class="row space-me  top-row">
+                    <div class="medium-5 large-5 medium-offset-1 large-offset-1 columns">
+                        <div class="buzz-one word-pic"></div>
+                    </div>
+                    <div class="medium-5 large-5 columns end ft">
+                        <div class="row">
+                            <h3>Fresh Products Weekly</h3>
+                        </div>
+                        <div class="row">
+                            <h6>Homefield Oragnics carries a large range of organic, local and fresh foods. We keep great taste high up on our priority list, as we are sure you do too. Local food critic Hunter Caron has given our produce selection a 5 out of 5</h6>
+                        </div>
+                    </div>
                 </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+                <div class="row space-me">
+                    <div class="medium-5 large-5 medium-offset-1 large-offset-1 columns ft odd">
+                        <div class="row">
+                            <h3>Easy to Order</h3>
+                        </div>
+                        <div class="buzz-two row">
+                            <h6>With our fast and dynamic online store you can browse, pick and order online veggies extremely easily and quickly. It’s not hard to come home to fresh produce. Even a teacher could do it without a problem!</h6>
+                        </div>
+                    </div>
+                    <div class="medium-5 large-5 columns end">
+                        <div class="word-pic"></div>
+                    </div>
+                </div>
+
+                <div class="row space-me">
+                    <div class="medium-5 large-5 medium-offset-1 large-offset-1 columns">
+                        <div class="buzz-three word-pic"></div>
+                    </div>
+                    <div class="medium-5 large-5 columns end ft">
+                        <div class="row">
+                            <h3>Eco-Friendly</h3>
+                        </div>
+                        <div class="row">
+                            <h6>Whether is be the veggies or the enviroment, Homefield Organics pledges to be as green as can be, end to end. From our bike messenger who delivers veggies, to the way our toilets work.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+        
+        <div class="divider-image">
+            <div></div>
+        </div>
+        
+        <steps></steps>
+        
+        <div class="divider-image second">
+            <div></div>
+        </div>
+        
+        <!-- Preview Store -->
+        <div class="store-background">
+            <div class="row">
+                <div ng-controller="StoreController as store">
+                    <div class="row">
+                        <div class="large-12 medium-10 small-centered large-uncentered columns no-pad">
+                            <div class="row collapse">
+                                <div class="small-10 medium-10 columns">
+                                    <input class="search-box" type="text" placeholder="Search" ng-model="search">
+                                </div>
+                                <div class="small-2 medium-2 columns">
+                                    <a href="#" class="button search-button postfix">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div></div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="large-11 medium-11 medium-centered large-uncentered columns">
+                            <div class="row store-item" ng-repeat="product in store.products | filter:search">
+                                <div class="large-1 medium-1 columns">
+                                    
+                                    <div class="checkboxFour">
+  		                                <input type="checkbox" class="checkbox" value="1" id="{{product.name}}" ng-model="product.isSelected"/>
+	  	                                <label for="{{product.name}}"></label>
+  	                                 </div>
+                                </div>
+                                <div class="large-6 medium-6 columns">
+                                    <div class="row name-area">
+                                        <div class="large-12 medium-12 column name-box no-pad">
+                                            <h5 class="item-subcategory">{{product.subCategory}}: </h5>
+                                            <h3 class="item-name">{{product.name}}</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="item-origin">From {{product.origin}}</p>
+                                    </div>
+                                </div>
+                                <div class="large-1 medium-1 columns">
+                                    <h5 class="item-price">{{product.price[0] | currency}}</h5>
+                                </div>
+                                <div class="large-2 medium-2 columns">
+                                    <!--
+                                    <select class="form-control item-sizes" ng-options="sizes for sizes in product.sizes">
+                                        <option value="" ng-bind="product.sizes[0]"></option>
+                                    </select>
+                                    -->
+                                    <h5>{{product.sizes[0]}}</h5>
+                                </div>
+                                <div class="large-2 medium-2 columns">
+                                    <div class="row">
+                                        <div class="icon organic has-tip [radius round]" data-tooltip title="Organic Item" data-options="disable_for_touch:true" ng-show="{{product.isOrganic === true}}"></div>
+                                        <div class="icon local has-tip [radius round]" data-tooltip title="Local Item" data-options="disable_for_touch:true" ng-show="{{product.isLocal === true}}"></div>
+                                        <div class="icon sale has-tip [radius round]" data-tooltip title="Sale Item" data-options="disable_for_touch:true" ng-show="{{product.isOnSale === true}}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <div class="large-1 medium-11 medium-centered large-uncentered column order-area-outer">
+                            
+                            <a href="#" class="button open-cart" data-options="align:left" data-dropdown="drop2">
+                                <img id="cart-logo" src="images/cart.svg" type="image/svg+xml"></img>
+                            </a>
+                                <div id="drop2" data-dropdown-content class="f-dropdown content large">
+                                 
+                                <div class="column order-area-inner">
+                                    <div class="row order-top">
+                                    <h3>Order Summary</h3>
+                                    </div>
+                                
+                                <div class="row order-item" ng-repeat="product in store.products | filter: 'walrus'">
+                                    <div class="large-1 medium-1 column">
+                                        <div class="remove-icon"></div>
+                                    </div>
+                                    <div class="large-8 medium-8 column">
+                                        <h6 class="order-item-name">1lb - Apples: Red Gala</h6>
+                                    </div>
+                                    <div class="large-1 medium-1 column">
+                                        <select class="form-control item-quantity" ng-options="">
+                                            <option value>2</option>
+                                    </select>
+                                    </div>
+                                    <div class="large-1 medium-1 column no-pad">
+                                        <h6 class="order-item-price">$122.00</h6>
+                                    </div>
+                                </div>
+                                    
+                                <div class="row order-bottom">
+                                    <div class="row light-text">
+                                        <div class="large-6 medium-6 column">
+                                            <h6>Subtotal</h6>
+                                        </div>
+                                        <div class="large-5 medium-5 small-offset-1 column">
+                                            <h6>$220.00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row light-text">
+                                        <div class="large-6 medium-6 column">
+                                            <h6>Shipping</h6>
+                                        </div>
+                                        <div class="large-5 medium-5 small-offset-1 column">
+                                            <h6>$5.00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-6 medium-6 column">
+                                            <h6>Grand Total</h6>
+                                        </div>
+                                        <div class="large-5 medium-5 small-offset-1 column">
+                                            <h6>$225.00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-5 medium-5 column small-centered large-centered">
+                                            <a class="button  small">Submit Order</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                        
+                                    
+                                </div>
+                                
+                                
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="row">
+                <div class="medium-6 column">
+                    <p>Designed and Coded by Hunter Caron</p>
+                </div>
+                <div class="medium-3 medium-offset-3 large-3 large-offset-3 column end">
+                    <p>Not Official Homefield Organics Site</p>
+                </div>
+            </div>
+        </footer>
+        
+        
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/foundation/js/foundation.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
 </html>
