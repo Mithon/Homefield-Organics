@@ -98,6 +98,10 @@ h5 {
 
 //Top Bar
 
+.sign-up {
+    margin-left: 5px !important;
+}
+
 .sticky {
     border-bottom: 1px solid $light-green;
     z-index: 100 !important;
@@ -116,7 +120,7 @@ h5 {
 #bar-logo {
     height: 50px;
     width: 50px;
-    margin-right: 35px;
+    margin-right: 28px;
     margin-top:6px;
 }
 
@@ -188,6 +192,10 @@ nav.top-bar {
     }
 }
 
+.buzz-descrip * {
+    line-height: 160% !important;
+}
+
 .top-row {
     padding-top: 30px;
 }
@@ -220,6 +228,7 @@ nav.top-bar {
     background-origin:border-box;
     background-color: $light-green;
     background-repeat: no-repeat;
+    background-size: 80% !important;
     background-image: url("../images/buzzword-two.png");
 }
 
@@ -284,6 +293,42 @@ nav.top-bar {
 
 //Store Area
 
+//categories
+
+.categories {
+    background-color: $light-blue;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding-top: 15px !important;
+    
+    h6 {
+        padding-top: 5px !important;
+        color: #fff;
+    }
+}
+
+.list-category {
+    width: 150px;
+}
+
+.reverse {
+    margin-top: 1px;
+    height: 35px;
+    background: #fff;
+    color:  $dark-blue;
+    font-weight: 600;
+    &:hover {
+        background: $dark-blue;
+        color: #fff;
+    }
+}
+
+.clear-refine {
+    margin: 0 !important;
+}
+
+//search
+
 .search-box {
     height: 50px !important;
     font-size: 1.5rem !important;
@@ -296,6 +341,7 @@ nav.top-bar {
     //display: none;
     background-color: $gray;
     padding-top: 30px;
+    min-height: 600px;
 }
 
 .icon {
@@ -429,6 +475,7 @@ nav.top-bar {
     padding: 0;
     padding: 0 10px 2px 10px;
     border-radius: 6px;
+    margin-bottom: 0;
     background-color: $light-blue;
     &:hover {
         background-color: $dark-blue;
@@ -440,6 +487,14 @@ nav.top-bar {
     height: 40px;
     padding:0;
     padding-top: 5px;
+    cursor:pointer!important;
+}
+
+#help-logo {
+    width: 60px;
+    height: 40px;
+    padding:0;
+    padding-top: 1px;
     cursor:pointer!important;
 }
 
@@ -457,8 +512,8 @@ nav.top-bar {
 
 .order-area-outer {
     padding:0;
-    padding-left:12px;
-    margin-bottom: 50px;
+    padding-left:12px !important;
+    margin-bottom: 10px;
 }
 
 .order-area-inner {
